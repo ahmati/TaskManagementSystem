@@ -100,4 +100,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.MapGet("/", () => Results.Ok("Task Management System API is running"));
+
 app.Run();
