@@ -1,4 +1,4 @@
-Simple task management system. Access app via : https://task-flow-ewof3yjtq-ramazans-projects-aa4c7cff.vercel.app/
+Simple task management system. Access app via : https://task-flow-h2tlwyime-ramazans-projects-aa4c7cff.vercel.app/
 - Clean architecture design
 - Jwt authentication and authorization on task apis
 - CRUD actions
