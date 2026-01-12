@@ -6,5 +6,8 @@ Simple task management system. Access app via : https://task-flow-ewof3yjtq-rama
 - Repository pattern
 - Sqlite database (for simplicity)
 - Code first migration approach
+- Dockerfile/containers
 - Fly.io for BE deployment (Vercel for FE)
+- Unit testing (xUnit)
+- .Net Core 8, EF core, 
 - SwaggerUi : https://taskmanagementsystem-withered-butterfly-2490.fly.dev/swagger/index.html
