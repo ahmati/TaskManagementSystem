@@ -12,15 +12,19 @@ namespace Infrastructure;
 public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructure(
-    this IServiceCollection services,
-    IConfiguration configuration)
+        this IServiceCollection services,
+        IConfiguration configuration)
     {
+        var dbPath = Path.Combine(
+            AppContext.BaseDirectory,
+            "tasks.db");
+
         services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlite(
-                configuration.GetConnectionString("DefaultConnection")));
+            options.UseSqlite($"Data Source={dbPath}"));
 
         return services;
     }
+
 
     public static IServiceCollection AddServices(this IServiceCollection services) 
     {

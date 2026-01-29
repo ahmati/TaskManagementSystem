@@ -1,3 +1,4 @@
+using Application.Tasks.Dtos;
 using Infrastructure;
 using Infrastructure.Persistence;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -6,8 +7,15 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using System.Text.Json.Serialization;
+using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var port = Environment.GetEnvironmentVariable("WEBSITES_PORT")
+           ?? Environment.GetEnvironmentVariable("PORT")
+           ?? "8080";
+
+builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 
 // Add services to the container.
 
@@ -51,7 +59,6 @@ builder.Services.AddCors(options =>
     });
 });
 
-
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -64,7 +71,7 @@ builder.Services.AddSwaggerGen(c =>
         Scheme = "Bearer",
         BearerFormat = "JWT",
         In = ParameterLocation.Header,
-        Description = "Enter 'Bearer' [space] and then your valid token."
+        Description = "Enter 'Bearer' and then your valid token."
     });
 
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
