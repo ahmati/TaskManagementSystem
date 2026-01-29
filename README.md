@@ -1,0 +1,13 @@
+Simple task management system. Access app via : https://task-flow-h2tlwyime-ramazans-projects-aa4c7cff.vercel.app/
+- Clean architecture design
+- Jwt authentication and authorization on task apis
+- CRUD actions
+- Mediator pattern (for demo purpose)
+- Repository pattern
+- Sqlite database (for simplicity)
+- Code first migration approach
+- Dockerfile/containers
+- Fly.io for BE deployment (Vercel for FE)
+- Unit testing (xUnit)
+- .Net Core 8, EF core, 
+- SwaggerUi : https://taskmanagementsystem-withered-butterfly-2490.fly.dev/swagger/index.html
