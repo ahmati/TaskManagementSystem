@@ -7,7 +7,7 @@ Simple task management system. Access app via : https://task-flow-indol-nu.verce
 - Sqlite database (for simplicity)
 - Code first migration approach
 - Dockerfile/containers
-- Azure (free tier) for deployment 
+- Azure for deployment 
 - Unit testing (xUnit)
 - .Net Core 8, EF core, 
 - SwaggerUi : https://task-management2-hecwfyetexgyhzbv.canadacentral-01.azurewebsites.net/swagger/index.html
